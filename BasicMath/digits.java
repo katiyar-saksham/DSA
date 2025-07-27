@@ -1,3 +1,4 @@
+package BasicMath;
 public class digits {
     public static void main(String[] args) {
         int number = 7675765;
