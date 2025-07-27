@@ -1,0 +1,8 @@
+# Ignore compiled Java class files
+*.class
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
