@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CountDigit {
+public class countDigit {
     public static void main(String[] args) {
         int number = 12345;
         int count = countDigits(number);
