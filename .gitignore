@@ -14,4 +14,6 @@
 # git push origin main
 
 
-# git add . && git commit -m "Auto update" && git pull --rebase origin main && git push origin main
+
+# FINAL COMMAND
+# git fetch origin main && git rebase origin/main && git add . && git commit -m "Auto update" && git push origin main
