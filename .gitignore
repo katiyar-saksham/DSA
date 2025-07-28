@@ -8,3 +8,8 @@
 .vscode/
 
 # git pull --rebase origin main
+
+
+# git add .
+# git commit -m "Updated AllDivisor, isPrime; added GCD"
+# git push origin main
