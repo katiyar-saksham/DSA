@@ -9,7 +9,9 @@
 
 # git pull --rebase origin main
 
-
 # git add .
-# git commit -m "Updated AllDivisor, isPrime; added GCD"
+# git commit -m "Auto updated"
 # git push origin main
+
+
+# git add . && git commit -m "Auto update" && git pull --rebase origin main && git push origin main
