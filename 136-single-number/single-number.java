@@ -1,16 +1,12 @@
 class Solution {
     public int singleNumber(int[] nums) {
-        for (int i = 0; i < nums.length; i++) {
-            boolean isUnique = true;
-            for (int j = 0; j < nums.length; j++) {
-                if (nums[i] == nums[j] && i != j) {
-                    isUnique = false;
-                    break;
-                }
-            }
-            if (isUnique) {
-                return nums[i];
-            }
+        Map<Integer, Integer> mpp = new HashMap<>();
+        for (int num : nums) {
+            mpp.put(num, mpp.getOrDefault(num, 0) + 1);
+        }
+        for (int num : nums) {
+            if (mpp.get(num) == 1)
+                return num;
         }
         return -1;
     }
