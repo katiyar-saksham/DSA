@@ -1,6 +1,7 @@
 # git smartpush
 
-
+# full COMMAND
+# git stash push -m "Auto stash before rebase" && git pull --rebase origin main && git stash pop && git add . && git commit -m "Auto update" && git push origin main
 
 
 # Ignore compiled Java class files
@@ -27,5 +28,4 @@
 # git add . && git commit -m "Auto update" && git pull --rebase origin main && git push origin main
 
 
-# FINAL GOD COMMAND
-# git stash push -m "Auto stash before rebase" && git pull --rebase origin main && git stash pop && git add . && git commit -m "Auto update" && git push origin main
+
