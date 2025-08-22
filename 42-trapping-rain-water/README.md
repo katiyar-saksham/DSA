@@ -24,3 +24,22 @@
 	<li><code>1 &lt;= n &lt;= 2 * 10<sup>4</sup></code></li>
 	<li><code>0 &lt;= height[i] &lt;= 10<sup>5</sup></code></li>
 </ul>
+
+
+### 🔎 Full Code Explanation (Without Code)
+Start mein, hum array ki length check karte hain — agar array empty hai to seedha 0 return kar dete hain, kyunki paani trap hi nahi ho sakta.
+Hum do pointers lete hain — ek `left` jo array ke start se chalega, aur ek `right` jo end se chalega.
+Do variables `leftMax` aur `rightMax` bhi lete hain, jo ab tak mile sabse bade wall ko track karte hain left aur right side se respectively.
+Ab jab tak `left < right`, hum loop chalaate hain:
+Har step pe compare karte hain: left side ki building chhoti hai ya right side ki.
+Jo side chhoti hoti hai, usi side ke pointer ko move karte hain (kyunki wahi paani trap hone ki limit banata hai).
+Agar current height us side ke max se chhoti hai, to iska matlab wahan paani trap ho sakta hai — to hum `max - current height` kar ke paani add karte hain.
+Agar current height max se badi ya barabar hai, to max ko update kar dete hain.
+Yeh process tab tak repeat hota hai jab tak left aur right pointers ek dusre ko cross nahi kar lete.
+Loop ke baad, humne total jitna paani trap ho sakta tha, wo calculate kar liya hota hai — use return kar dete hain.
+
+---
+
+### 🧠 Core Idea in One Line:
+
+Hum har position pe ye dekh rahe hain ki us point ke left aur right ka maximum wall kitna hai, aur uske basis par decide karte hain ki wahan paani trap ho sakta hai ya nahi.
