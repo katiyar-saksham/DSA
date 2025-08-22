@@ -5,7 +5,7 @@ public class fibonacci  {
     }
 
     public static void main(String[] args) {
-        int n = 10; // Example input
+        int n = 5;
         System.out.println("Fibonacci of " + n + " is: " + fib(n));
     }
 }
