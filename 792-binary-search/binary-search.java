@@ -7,13 +7,15 @@ class Solution {
         if (start > end) {
             return -1;
         }
+
         int mid = start + (end - start) / 2;
+
         if (nums[mid] == target) {
             return mid;
         } else if (nums[mid] < target) {
             return BS(nums, target, mid + 1, end);
         } else {
-            return BS(nums, target, start, end - 1);
+            return BS(nums, target, start, mid - 1);
         }
     }
 }
