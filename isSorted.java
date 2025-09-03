@@ -4,11 +4,13 @@ public class isSorted {
             return true;
         }
 
-        if (arr[idx] > arr[idx + 1]) {
-            return false;
-        }
+        // if (arr[idx] > arr[idx + 1]) {
+        // return false;
+        // }
 
-        return sorted(arr, idx + 1);
+        // return sorted(arr, idx + 1);
+
+        return arr[idx] < arr[idx + 1] && sorted(arr, idx + 1);
     }
 
     public static void main(String[] args) {
