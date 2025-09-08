@@ -17,7 +17,7 @@ public class isSorted {
         int[] sortedArr = { 1, 2, 3, 4, 5 };
         int[] unsortedArr = { 1, 3, 2, 4, 5 };
 
-        System.out.println("sortedArr is sorted? " + sorted(sortedArr, 0));
         System.out.println("unsortedArr is sorted? " + sorted(unsortedArr, 0));
+        System.out.println("sortedArr is sorted? " + sorted(sortedArr, 0));
     }
 }
