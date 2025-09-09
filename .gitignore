@@ -5,11 +5,21 @@
 # !git stash push -u -m "Auto stash before rebase" && git pull --rebase origin main && git stash pop && git add . && git commit -m "Auto update" && git push origin main
 
 
-# Ignore compiled Java class files
+# Java Build Artifacts
+#################################
 *.class
+*.jar
+*.war
+*.ear
 
-# macOS
+#################################
+# macOS System Files
+#################################
 .DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
 
 
 # VS Code
