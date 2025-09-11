@@ -14,23 +14,25 @@ public class BinarySearch {
         if (result != -1) {
             System.out.println("Element found at index " + result);
         } else {
-            System.out.println("Element not found ");
+            System.out.println("Element not found");
         }
 
         scanner.close();
     }
 
-    static int binarySearch(int[] n, int target, int start, int end) {
+    static int binarySearch(int[] arr, int target, int start, int end) {
         if (start > end) {
             return -1;
         }
 
         int mid = start + (end - start) / 2;
-        if (target < n[mid]) {
-            return binarySearch(n, target, start, mid - 1);
-        } else if (target > n[mid]) {
-            return binarySearch(n, target, mid + 1, end);
-        } else
+
+        if (arr[mid] == target) {
             return mid;
+        } else if (target < arr[mid]) {
+            return binarySearch(arr, target, start, mid - 1);
+        } else {
+            return binarySearch(arr, target, mid + 1, end);
+        }
     }
 }
