@@ -1,5 +1,7 @@
 # git smartpush
 
+# git config --global alias.smartpush '!git fetch origin && git pull --rebase origin main && git push origin main'
+
 # git config --global alias.smartpush '!git stash push -u -m "Auto stash before push"; \
 # git pull --rebase origin main || echo "⚠️ Pull failed, continuing with local changes"; \
 # git stash pop 2>/dev/null || echo "⚠️ Conflicts ignored, local changes kept"; \
