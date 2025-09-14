@@ -1,9 +1,16 @@
 # git smartpush
 
+# git config --global alias.smartpush '!git stash push -u -m "Auto stash before push"; \
+# git pull --rebase origin main || echo "⚠️ Pull failed, continuing with local changes"; \
+# git stash pop 2>/dev/null || echo "⚠️ Conflicts ignored, local changes kept"; \
+# git add .; git commit -m "Auto update" 2>/dev/null || echo "Nothing to commit"; \
+# git push origin main'
+
+
+
 
 # full COMMAND
 # !git stash push -u -m "Auto stash before rebase" && git pull --rebase origin main && git stash pop && git add . && git commit -m "Auto update" && git push origin main
-
 
 # Java Build Artifacts
 #################################
