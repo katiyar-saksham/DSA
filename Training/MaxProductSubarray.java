@@ -12,7 +12,7 @@ public class MaxProductSubarray {
 
         return maxProduct;
     }
-
+    
     public static void main(String[] args) {
         int[] nums = { 2, 3, 3, -2, 4, 10, 3 };
         System.out.println("Maximum Product Subarray: " + maxProduct(nums));
