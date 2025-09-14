@@ -7,9 +7,6 @@ public class MaxProductSubarray {
         for (int i = 0; i < nums.length; i++) {
             currentProduct *= nums[i];
             maxProduct = Math.max(maxProduct, currentProduct);
-            if (currentProduct == 0) {
-                currentProduct = 1;
-            }
         }
         return maxProduct;
     }
