@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class MaxProductSubarray {
     public static int maxProduct(int[] nums) {
         int maxProduct = Integer.MIN_VALUE;
