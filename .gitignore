@@ -1,9 +1,8 @@
-# git config --global alias.smartpush '!git stash -u -q push -m "Auto stash before push"; \
-# git pull --rebase -q origin main 2>/dev/null || echo "⚠️ Pull failed, local changes kept"; \
-# git stash pop -q 2>/dev/null || echo "⚠️ Conflicts ignored"; \
-# git add -A >/dev/null 2>&1; \
-# git commit -m "Auto update" >/dev/null 2>&1 || echo "Nothing to commit"; \
-# git push -q origin main'
+# git config --global alias.smartpush '!git stash push -u -m "Auto stash before push"; \
+# git pull --rebase origin main || echo "⚠️ Pull failed, continuing with local changes"; \
+# git stash pop 2>/dev/null || echo "⚠️ Conflicts ignored, local changes kept"; \
+# git add .; git commit -m "Auto update" 2>/dev/null || echo "Nothing to commit"; \
+# git push origin main'
 
 
 # git config --global alias.smartpush '!git stash push -u -m "Auto stash before push"; git pull --rebase origin main || echo "⚠️ Pull failed, continuing with local changes"; git stash pop 2>/dev/null || echo "⚠️ Conflicts ignored, local changes kept"; git add .; git commit -m "Auto update" 2>/dev/null || echo "Nothing to commit"; git push origin main'
