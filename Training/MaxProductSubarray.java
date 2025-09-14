@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class MaxProductSubarray {
     public static int maxProduct(int[] nums) {
         int maxProduct = Integer.MIN_VALUE;
@@ -15,8 +13,7 @@ public class MaxProductSubarray {
     }
 
     public static void main(String[] args) {
-        int[] nums = { 2, 3,3, -2, 4 ,2,10};
+        int[] nums = { 2, 3, 3, -2, 4, 2, 10 };
         System.out.println("Maximum Product Subarray: " + maxProduct(nums));
     }
 }
-
