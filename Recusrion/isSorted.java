@@ -3,21 +3,14 @@ public class isSorted {
         if (idx == arr.length - 1) {
             return true;
         }
-
-        // if (arr[idx] > arr[idx + 1]) {
-        // return false;
-        // }
-
-        // return sorted(arr, idx + 1);
-
         return arr[idx] < arr[idx + 1] && sorted(arr, idx + 1);
     }
 
     public static void main(String[] args) {
-        int[] sortedArr = { 1, 2, 3, 4, 5 };
-        int[] unsortedArr = { 1, 3, 2, 4, 5 };
+        int[] Arr1 = { 1, 2, 3, 4, 5 };
+        int[] Arr2 = { 1, 3, 2, 4, 5 };
 
-        System.out.println("unsortedArr is sorted? " + sorted(unsortedArr, 0));
-        System.out.println("sortedArr is sorted? " + sorted(sortedArr, 0));
+        System.out.println("is Array 1 sorted? " + sorted(Arr1, 0));
+        System.out.println("Arr2 sorted? " + sorted(Arr2, 0));
     }
 }
