@@ -19,6 +19,6 @@ public class sample {
         int num = sc.nextInt();
         int c=rev(num);
         System.out.println(c);
-
+        sc.close();
     }
 }
