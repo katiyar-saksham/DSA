@@ -12,4 +12,14 @@ public class MissingInArray {
         }
         System.out.println(OgSum - arrSum);
     }
+
+    public static int findMissingRecursive(int[] nums, int index, int expected) {
+        if (index == nums.length) {
+            return expected;
+        }
+        if (nums[index] != expected) {
+            return expected;
+        }
+        return findMissingRecursive(nums, index + 1, expected + 1);
+    }
 }
