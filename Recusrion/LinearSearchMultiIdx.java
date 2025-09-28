@@ -10,16 +10,9 @@ public class LinearSearchMultiIdx {
         if (arr[idx] == target) {
             res.add(idx);
         }
-
-        List<Integer> temp = LS(arr, target, idx++);
+        List<Integer> temp = LS(arr, target, idx + 1);
         res.addAll(temp);
         return res;
-    }
-
-    public static void main(String[] args) {
-        int[] nums = { 1, 2, 3, 4, 5 };
-        List<Integer> indices = linearSearch(nums, 1);
-        System.out.println("Indices of 1 in the array: " + indices);
     }
 
     public static List<Integer> linearSearch(int[] arr, int target) {
@@ -30,5 +23,16 @@ public class LinearSearchMultiIdx {
             }
         }
         return result;
+    }
+
+     public static void main(String[] args) {
+        int[] nums = { 1, 2, 3, 4, 5 };
+        int target = 4;
+
+        List<Integer> recursiveIndices = LS(nums, target, 0);
+        List<Integer> iterativeIndices = linearSearch(nums, target);
+
+        System.out.println("\"LS\" Indices of " + target + " in the array: " + recursiveIndices);
+        System.out.println("\"linearSearch\" Indices of " + target + " in the array: " + iterativeIndices);
     }
 }
