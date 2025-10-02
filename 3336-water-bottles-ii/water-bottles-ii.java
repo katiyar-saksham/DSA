@@ -3,15 +3,12 @@ class Solution {
         int drank = numBottles;
         int empty = numBottles;
 
+
         while (empty >= numExchange) {
-            int newFull = 0;
-            while (empty >= numExchange) {
-                empty-=numExchange;
-                newFull+=1;
-                numExchange++;
-            }
-            drank += newFull;
-            empty = empty % numExchange + newFull;
+            empty -= numExchange;
+            drank += 1;
+            empty += 1;
+            numExchange += 1;
         }
         return drank;
     }
