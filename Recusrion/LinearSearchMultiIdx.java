@@ -36,3 +36,4 @@ public class LinearSearchMultiIdx {
         System.out.println("\"linearSearch\" Indices of " + target + " in the array: " + iterativeIndices);
     }
 }
+
