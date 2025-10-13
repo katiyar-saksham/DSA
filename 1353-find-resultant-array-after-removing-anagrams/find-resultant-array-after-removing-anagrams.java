@@ -16,15 +16,15 @@ class Solution {
         return result;
     }
 
-//helper fn
+    //helper fn
     private boolean isAnagram(String s, String t) {
         if (s.length() != t.length())
             return false;
 
-        int[] count = new int[26];
+        int[] count = new int[26]; //small alphabets == 26 hai
 
         for (int i = 0; i < s.length(); i++) {
-            count[s.charAt(i) - 'a']++;
+            count[s.charAt(i) - 'a']++; //ex: 'c' - 'a' = 99 - 97 = 2 → this maps 'c' to index 2.
             count[t.charAt(i) - 'a']--;
         }
 
