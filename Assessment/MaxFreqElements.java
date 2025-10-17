@@ -5,9 +5,8 @@ public class MaxFreqElements {
     public static int maxFreq(int[] nums) {
         HashMap<Integer, Integer> mpp = new HashMap<>();
         int maxF = 0;
-        int ans = 0; // initialize to 0, since we are summing frequencies
+        int ans = 0;
 
-        // Count frequency of each element
         for (int num : nums) {
             mpp.put(num, mpp.getOrDefault(num, 0) + 1);
         }
@@ -32,6 +31,8 @@ public class MaxFreqElements {
     public static void main(String[] args) {
         int[] nums = { 1, 2, 3, 4, 5, 5, 5 };
         int res = maxFreq(nums);
-        System.out.println(res); // Output: 3
+        System.out.println(res);
     }
 }
+
+
