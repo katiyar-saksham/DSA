@@ -1,4 +1,4 @@
-public class RemoveDuplicate2 {
+public class RemoveDuplicate2SortedArray {
 
     public static void main(String[] args) {
         int[] nums = { 1, 1, 2, 3, 3, 3, 3, 4, 4, 5 };
