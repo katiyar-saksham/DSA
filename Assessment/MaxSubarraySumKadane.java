@@ -9,7 +9,7 @@ public class MaxSubarraySumKadane {
     public static int maxSubArray(int[] nums) {
 
         if (nums == null || nums.length == 0) {
-            return 0; // Or throw an exception, depending on problem constraints
+            return 0;
         }
         int maxSum = nums[0];
         int currSum = nums[0];
