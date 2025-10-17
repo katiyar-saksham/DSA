@@ -7,6 +7,7 @@ public class FindEquilibriumElement {
         for (int num : nums) {
             totalSum += num;
         }
+
         for (int i = 0; i < nums.length; i++) {
             int rightSum = totalSum - leftSum - nums[i];
             if (rightSum == leftSum) {
@@ -18,9 +19,8 @@ public class FindEquilibriumElement {
     }
 
     public static void main(String[] args) {
-        int[] nums = {1,2,3,-4,3,2,1};
+        int[] nums = { 1, 2, 3, -4, 3, 2, 1 };
         int result = findEquilibriumElement(nums);
         System.out.println(result);
     }
 }
-
