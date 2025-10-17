@@ -17,13 +17,14 @@ public class RemoveDuplicate2SortedArray {
         if (nums.length <= k)
             return nums.length;
 
-        int i = k; // write pointer
+        int i = k;
 
         for (int j = k; j < nums.length; j++) {
-            if (nums[j] != nums[i - k]) {
-                nums[i] = nums[j];
-                i++;
+            if (nums[j] == nums[i - k]) {
+                continue;
             }
+            nums[i] = nums[j];
+            i++;
         }
         return i;
     }
