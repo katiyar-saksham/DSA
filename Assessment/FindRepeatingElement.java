@@ -7,9 +7,9 @@ public class FindRepeatingElement {
             mpp.put(num, mpp.getOrDefault(num, 0) + 1);
         }
 
-        for (int num : mpp.keySet()) {
-            if (mpp.get(num) > 1) {
-                return num;
+        for (int key : mpp.keySet()) {
+            if (mpp.get(key) > 1) {
+                return key;
             }
         }
         return -1;
