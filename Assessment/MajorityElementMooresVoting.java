@@ -39,6 +39,6 @@ public class MajorityElementMooresVoting {
     public static void main(String[] args) {
         int[] nums = { 2, 2, 1, 1, 0, 0, 1};
         int result = majorityElement(nums);
-        System.out.println(result);  // Should print 1 since it's the majority element
+        System.out.println(result);
     }
 }
