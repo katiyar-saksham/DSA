@@ -1,3 +1,4 @@
+package Arrays;
 public class RunningSumArray {
     public static int Sum(int[] nums) {
         int res = 0;

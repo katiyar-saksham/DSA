@@ -1,3 +1,4 @@
+package Arrays;
 public class RemoveDuplicate2SortedArray {
 
     public static void main(String[] args) {

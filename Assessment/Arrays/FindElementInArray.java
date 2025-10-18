@@ -1,3 +1,4 @@
+package Arrays;
 public class FindElementInArray {
 
     public static void main(String[] args) {
