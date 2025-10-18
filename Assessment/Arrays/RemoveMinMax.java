@@ -16,7 +16,13 @@ class Solution {
                 maxIdx = i;
             }
         }
-
+        // int index = 0;
+        // for (int i : arr) {
+        //     if (i != Min && i != Max) {
+        //         res[index++] = i;
+        //     }
+        // }
+        
         int opt1 = Math.max(minIdx, maxIdx) + 1; // rm both from left
         int opt2 = n - Math.min(minIdx, maxIdx); // rm both from right
         int opt3 = (Math.min(minIdx, maxIdx) + 1) + (n - Math.max(minIdx, maxIdx)); // rm one from each side
