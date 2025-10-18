@@ -1,4 +1,4 @@
-package Arrays;
+
 public class FindEquilibriumElement {
 
     public static int findEquilibriumElement(int[] nums) {

@@ -1,4 +1,4 @@
-package Arrays;
+
 public class MajorityElementMooresVoting {
     public static int majorityElement(int[] nums) { // n/2 Majority element
         // isme moore voting algo use hoga

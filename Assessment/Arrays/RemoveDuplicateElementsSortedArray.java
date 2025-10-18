@@ -1,4 +1,4 @@
-package Arrays;
+
 public class RemoveDuplicateElementsSortedArray {
 
     public static void main(String[] args) {

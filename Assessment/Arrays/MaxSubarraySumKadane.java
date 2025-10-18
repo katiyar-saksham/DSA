@@ -1,4 +1,4 @@
-package Arrays;
+
 public class MaxSubarraySumKadane {
 
     public static void main(String[] args) {
