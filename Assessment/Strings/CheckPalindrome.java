@@ -1,11 +1,7 @@
-import java.util.Scanner;
-
 public class CheckPalindrome {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a string: ");
-        String s = sc.nextLine();
+        String s = "MADAM";
         if (isPalindrome(s)) {
             System.out.println(s + " is a palindrome");
         } else {
@@ -14,10 +10,9 @@ public class CheckPalindrome {
     }
 
     public static boolean isPalindrome(String s) {
-        int l = 0;
-        int r = s.length() - 1;
+        int l = 0, r = s.length() - 1;
         while (l < r) {
-            if (s.charAt(l) != s.charAt(r)) {
+            if (Character.toLowerCase(s.charAt(l)) != Character.toLowerCase(s.charAt(r))) {
                 return false;
             }
             l++;
