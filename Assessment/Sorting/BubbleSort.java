@@ -1,14 +1,18 @@
 public class BubbleSort {
 
+    public static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
     public static void bubbleSort(int[] arr) {
         int n = arr.length;
         for (int i = 0; i < n; i++) {
             boolean isSwapped = false;
             for (int j = 1; j < n - i; j++) {
                 if (arr[j] < arr[j - 1]) {
-                    int temp = arr[j];
-                    arr[j] = arr[j - 1];
-                    arr[j - 1] = temp;
+                    swap(arr, j, j - 1);
                     isSwapped = true;
                 }
             }
@@ -27,3 +31,4 @@ public class BubbleSort {
         System.out.println();
     }
 }
+
