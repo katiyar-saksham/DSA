@@ -10,11 +10,16 @@ public class SelectionSort {
                 }
             }
             // Swap the found minimum element with the first element
-            int temp = arr[minIndex];
-            arr[minIndex] = arr[i];
-            arr[i] = temp;
+            swap(arr, i, minIndex);
         }
     }
+
+    private static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
     public static void main(String[] args) {
         int[] arr = { 64, 25, 12, 22, 11 };
         selectionSort(arr);
@@ -24,3 +29,4 @@ public class SelectionSort {
         System.out.println();
     }
 }
+
