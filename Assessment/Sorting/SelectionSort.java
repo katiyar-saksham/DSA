@@ -3,14 +3,13 @@ public class SelectionSort {
         int n = arr.length;
 
         for (int i = 0; i < n - 1; i++) {
-            int minIndex = i;
+            int minIdx = i;
             for (int j = i + 1; j < n; j++) {
-                if (arr[j] < arr[minIndex]) {
-                    minIndex = j;
+                if (arr[j] < arr[minIdx]) {
+                    minIdx = j;
                 }
             }
-            // Swap the found minimum element with the first element
-            swap(arr, i, minIndex);
+            swap(arr, i, minIdx);
         }
     }
 
