@@ -9,7 +9,9 @@ public class SelectionSort {
                     minIdx = j;
                 }
             }
-            swap(arr, i, minIdx);
+            if (minIdx != i) {
+                swap(arr, i, minIdx);
+            }
         }
     }
 
@@ -28,4 +30,3 @@ public class SelectionSort {
         System.out.println();
     }
 }
-
