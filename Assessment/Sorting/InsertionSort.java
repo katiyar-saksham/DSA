@@ -1,6 +1,5 @@
 
 public class InsertionSort {
-
   public static void main(String[] args) {
     int[] arr = { 64, 25, 12, 22, 11 };
     insertionSort(arr);
@@ -12,8 +11,8 @@ public class InsertionSort {
 
   public static void insertionSort(int[] arr) {
     int n = arr.length;
-    for (int i = 1; i < n - 1; i++) {
-      for (int j = i + 1; j < n - 1; j++) {
+    for (int i = 1; i < n; i++) {
+      for (int j = i + 1; j > 0 && j < n; j--) {
         if (arr[j] < arr[j - 1]) {
           swap(arr, j, j - 1);
         } else {
