@@ -1,9 +1,9 @@
 class Solution {
     public int smallestNumber(int n) {
-        int x = 1;
-        while (x - 1 < n) {
-            x <<= 1;  // x = x * 2
+        int res = 0;
+        while (res < n) {
+            res = 2 * res + 1; // this gives no. like 1,3,7,15... (2^n -1) wle no milege
         }
-        return x - 1;
+        return res;
     }
 }
