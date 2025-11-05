@@ -16,7 +16,7 @@ public class MaxMinSubarrayOfSizeK {
 
         maxSum = windowSum;
 
-        for (int i = 1; i <= n - k ; i++) {
+        for (int i = 1; i < n - k + 1; i++) {
             windowSum = windowSum + arr[i + k - 1] - arr[i - 1];
             maxSum = Math.max(maxSum, windowSum);
         }
@@ -33,6 +33,6 @@ public class MaxMinSubarrayOfSizeK {
         int[] arr2 = { 1, 9, -1, -2, 7, 3, -1, 2 };
         k = 4;
         System.out.println("Max sum of subarray of size " + k + " = " + solve(arr2, k));
-        // 16
+        // 13
     }
 }
