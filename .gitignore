@@ -4,6 +4,12 @@
 # git add .; git commit -m "Auto update" 2>/dev/null || echo "Nothing to commit"; \
 # git push origin main'
 
+# git config --global alias.smartpush '!f() { \\
+# git add .; \
+# git diff --cached --quiet || git commit -m "Auto update"; \
+# git pull --rebase origin $(git branch --show-current) || { echo "❌ Rebase failed. Fix conflicts first."; return 1; }; \
+# git push origin $(git branch --show-current); \
+# }; f'
 
 # git config --global alias.smartpush '!git stash push -u -m "Auto stash before push"; git pull --rebase origin main || echo "⚠️ Pull failed, continuing with local changes"; git stash pop 2>/dev/null || echo "⚠️ Conflicts ignored, local changes kept"; git add .; git commit -m "Auto update" 2>/dev/null || echo "Nothing to commit"; git push origin main'
 
