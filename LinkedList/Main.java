@@ -72,8 +72,8 @@ public class Main {
         System.out.println("\nOriginal List:");
         printList(head4);
 
-        Node kth = KthFromEnd.getKthFromEnd(head4, 2);
-        System.out.println("2nd From End: " + kth.val);
+        Node kth = KthFromEnd.getKthFromEnd(head4, 3);
+        System.out.println("3rd From End: " + kth.val);
     }
 }
 
