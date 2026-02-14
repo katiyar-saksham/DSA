@@ -11,26 +11,22 @@ class Solution {
         }
 
         k = k % len;
-        if (k == 0) return head;
+        if (k == 0)
+            return head;
 
         ListNode slow = head;
         ListNode fast = head;
 
-        for (int i = 1; i <= k + 1; i++) {
+        for (int i = 0; i < k; i++) {
             fast = fast.next;
         }
-        while (fast != null) {
+        while (fast.next != null) {
             slow = slow.next;
             fast = fast.next;
         }
         ListNode a = slow.next;
         slow.next = null;
-        ListNode t = a;
-
-        while (t.next != null) {
-            t = t.next;
-        }
-        t.next = head;
+        fast.next = head;
         return a;
     }
 }
