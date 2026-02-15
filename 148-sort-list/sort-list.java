@@ -1,44 +1,33 @@
 class Solution {
     public ListNode sortList(ListNode head) {
-        if (head == null || head.next == null) {
-            return head;
-        }
+        if (head == null || head.next == null) return head;
 
-        ListNode slow = head;
-        ListNode fast = head;
-
-        while (fast.next != null /*odd*/ && fast.next.next != null /*even*/) {
-            slow = slow.next;//left middle hai
+        ListNode prev = null, slow = head, fast = head;
+        while (fast != null && fast.next != null) {
+            prev = slow;
+            slow = slow.next;
             fast = fast.next.next;
         }
-        ListNode head2 = slow.next;
-        slow.next = null; //LL break
+        prev.next = null; // Break the list
 
-        head = sortList(head);
-        head2 = sortList(head2);
-        return mergeTwoLists(head, head2);
+        return mergeTwoLists(sortList(head), sortList(slow));
     }
 
-    public ListNode mergeTwoLists(ListNode t1, ListNode t2) {
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        ListNode dummy = new ListNode(0);
+        ListNode curr = dummy;
 
-        ListNode dm = new ListNode(0);
-        ListNode temp = dm;
-
-        while (t1 != null && t2 != null) {
-            if (t1.val <= t2.val) {
-                temp.next = t1;
-                t1 = t1.next;
+        while (l1 != null && l2 != null) {
+            if (l1.val <= l2.val) {
+                curr.next = l1;
+                l1 = l1.next;
             } else {
-                temp.next = t2;
-                t2 = t2.next;
+                curr.next = l2;
+                l2 = l2.next;
             }
-            temp = temp.next;
+            curr = curr.next;
         }
-        if (t1 == null) {
-            temp.next = t2;
-        } else {
-            temp.next = t1;
-        }
-        return dm.next;
+        curr.next = (l1 != null) ? l1 : l2;
+        return dummy.next;
     }
 }
