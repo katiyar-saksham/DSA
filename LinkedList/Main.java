@@ -80,5 +80,4 @@ public class Main {
     }
 }
 
-
 //javac LinkedList/*.java && java LinkedList.Main
