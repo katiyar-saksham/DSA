@@ -10,8 +10,8 @@ class Solution {
         ListNode curr = head.next;
         int idx = 1;  // curr index 1 pe hai (head index 0 hai) as idx 0 ya n kabhi critical pt nhi ho skte
 
-        int first = -1;
-        int last = -1;
+        int first = -1; /// store idx for first existing CP
+        int last = -1; //stores idx of latest CP found
         int minDist = Integer.MAX_VALUE;
 
         while (curr.next != null) {
@@ -41,6 +41,6 @@ class Solution {
             return new int[]{-1, -1};
         }
 
-        return new int[]{minDist, last - first}; //last - first} for MAX Distance
+        return new int[]{minDist, last - first}; //last - first for MAX Distance
     }
 }
