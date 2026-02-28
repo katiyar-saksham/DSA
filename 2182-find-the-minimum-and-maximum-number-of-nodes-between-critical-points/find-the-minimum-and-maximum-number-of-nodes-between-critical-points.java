@@ -24,7 +24,7 @@ class Solution {
 
                 if (first == -1) {
                     first = idx;   // pehla critical point fix ho gaya (max distance ke liye)
-                } else {
+                } if(last!=-1) {
                     minDist = Math.min(minDist, idx - last);  // consecutive CP ke beech min distance
                 }
 
