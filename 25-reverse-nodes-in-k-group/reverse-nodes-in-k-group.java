@@ -12,7 +12,7 @@ class Solution {
             // check if k nodes exist
             for (int i = 0; i < k && node != null; i++) {
                 node = node.next;
-            }
+            } 
             if (node == null) break;
 
             ListNode curr = prev.next;
