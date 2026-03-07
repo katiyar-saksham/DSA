@@ -1,13 +1,10 @@
 class Solution {
-    public int numberOfSteps(int num) {
-        int steps=0;
-        if (num == 0) {
+    public int numberOfSteps(int n) {
+        if (n == 0)
             return 0;
-        }
-        if (num % 2 == 0) {
-            return 1 + numberOfSteps(num / 2);
-        } else {
-            return 1 + numberOfSteps(num - 1);
-        }
+        if (n % 2 == 0)
+            return 1 + numberOfSteps(n / 2);
+        else
+            return 1 + numberOfSteps(n - 1);
     }
 }
