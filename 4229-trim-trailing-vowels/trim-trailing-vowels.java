@@ -1,0 +1,15 @@
+class Solution {
+    public String trimTrailingVowels(String s) {
+        int n = s.length() -1;
+
+        while( n >= 0 && isVowel(s.charAt(n))){
+            n--;
+        }
+
+        return s.substring(0,n+1);
+    }
+
+    private static boolean isVowel(char c){
+        return c =='a' || c =='e' || c =='i' || c =='o' || c =='u';
+    }
+}
