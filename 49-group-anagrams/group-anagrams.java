@@ -10,11 +10,12 @@ class Solution {
             }
 
             StringBuilder sb = new StringBuilder();
-            for (int c : arr) {
-                sb.append("#").append(c);
+            for (int a : arr) {
+                sb.append('#').append(a);
             }
 
             String key = sb.toString();
+
             if (!mpp.containsKey(key)) {
                 mpp.put(key, new ArrayList<>());
             }
