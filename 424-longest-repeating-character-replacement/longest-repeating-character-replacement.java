@@ -12,6 +12,8 @@ class Solution {
 
             maxFreq = Math.max(maxFreq, mpp.get(ch));
 
+            // How many characters are NOT the dominant character
+                // window size - maxFreq ?
             while ((i - left + 1) - maxFreq > k) {
                 char rem = s.charAt(left);
                 mpp.put(rem, mpp.get(rem) - 1);
