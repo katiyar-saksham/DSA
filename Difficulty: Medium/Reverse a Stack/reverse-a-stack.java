@@ -1,13 +1,28 @@
 class Solution {
     public static void reverseStack(Stack<Integer> st) {
         // code here
-        int[] arr = new int[st.size()];
-        int k=0;
-        while(st.size()>0){
-            arr[k++]=st.pop();
+        if (st.isEmpty()) {
+            return;
         }
-        for(int i=0;i<arr.length;i++){
-            st.push(arr[i]);
+        
+        int top = st.pop();
+        reverseStack(st);
+        insertAtBottom(st, top);
+    }
+    
+    private static Stack<Integer> insertAtBottom(Stack<Integer> st, int x) {
+        Stack<Integer> temp = new Stack<>();
+
+        while (!st.isEmpty()) {
+            temp.push(st.pop());
         }
+
+        st.push(x);
+
+        while (!temp.isEmpty()) {
+            st.push(temp.pop());
+        }
+
+        return st;
     }
 }
