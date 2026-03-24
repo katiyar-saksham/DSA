@@ -1,15 +1,21 @@
+// User function Template for Java
+
 class Solution {
     public String removeConsecutiveCharacter(String s) {
+        // code here
+        Stack<Character> st = new Stack<>();
         
-        StringBuilder ans = new StringBuilder();
-        ans.append(s.charAt(0));
-        
-        for(int i = 1; i < s.length(); i++){
-            if(s.charAt(i) != s.charAt(i-1)){
-                ans.append(s.charAt(i));
+        for(int i=0;i<s.length();i++){
+            if(!st.isEmpty() && st.peek() == s.charAt(i)){
+                continue;
             }
+            st.push(s.charAt(i));
         }
         
-        return ans.toString();
+        StringBuilder sb = new StringBuilder();
+        for (char c : st) {
+            sb.append(c);
+        }
+        return sb.toString();
     }
 }
