@@ -4,15 +4,10 @@ class Solution {
         int[] res = new int[temp.length];
 
         for (int i = temp.length - 1; i >= 0; i--) {
-            while (!st.isEmpty() && temp[st.peek()] <= temp[i]) {
+            while (!st.isEmpty() && temp[i] >= temp[st.peek()]) {
                 st.pop();
             }
-
-            if (st.isEmpty()) {
-                res[i] = 0;
-            } else {
-                res[i] = st.peek() - i;
-            }
+            res[i] = st.isEmpty() ? 0 : st.peek() - i;
             st.push(i);
         }
         return res;
