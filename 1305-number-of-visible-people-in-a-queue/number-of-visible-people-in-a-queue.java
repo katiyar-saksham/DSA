@@ -7,7 +7,7 @@ class Solution {
         for (int i = n - 1; i >= 0; i--) {
             int cnt = 0;
 
-            while (!st.isEmpty() && ht[st.peek()] < ht[i]) {
+            while (!st.isEmpty() && st.peek() <= ht[i]) {
                 st.pop();
                 cnt++;
             }
@@ -17,7 +17,7 @@ class Solution {
             }
 
             res[i] = cnt;
-            st.push(i);
+            st.push(ht[i]);
         }
         return res;
     }
