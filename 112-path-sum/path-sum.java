@@ -3,7 +3,7 @@ class Solution {
         if (root == null) {
             return false;
         }
-        //leaf node k liye
+        //leaf node k liye i.e. path leaf node pr hi khtm hona chiye as "root-to-leaf path" given h
         if (root.left == null && root.right == null) {
             return targetSum == root.val;
         }
