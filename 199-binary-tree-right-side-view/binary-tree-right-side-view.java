@@ -12,9 +12,11 @@ class Solution {
             int size = q.size();
 
             for (int i = 0; i < size; i++) {
-                TreeNode front = q.remove();
+                TreeNode front = q.poll();
+                //remove() → throws exception if empty
+                // poll() → safer (returns null)
 
-                if (i == size - 1) {
+                if (i == size - 1) { //last node of this level
                     res.add(front.val);
                 }
 
