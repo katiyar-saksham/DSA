@@ -1,14 +1,9 @@
 class Solution {
     public int singleNonDuplicate(int[] nums) {
-        Map<Integer,Integer> mpp = new HashMap<>();
+        int ans = 0;
         for (int num : nums) {
-            mpp.put(num, mpp.getOrDefault(num, 0) + 1);
+            ans ^= num;
         }
-        for (int num : nums) {
-            if (mpp.get(num) == 1) {
-                return num;
-            }
-        }
-        return -1;
+        return ans;
     }
 }
