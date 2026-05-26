@@ -1,21 +1,26 @@
 class Solution {
     public int numberOfSpecialChars(String word) {
-        int cnt = 0;
-        for (char ch = 'a'; ch <= 'z'; ch++) {
-            boolean lwr = false;
-            boolean upr = false;
-            for (int i = 0; i < word.length(); i++) {
-                if (word.charAt(i) == ch) {
-                    lwr = true;
-                }
-                if (word.charAt(i) == Character.toUpperCase(ch)) {
-                    upr = true;
-                }
+
+        boolean[] lower = new boolean[26];
+        boolean[] upper = new boolean[26];
+
+        for (char ch : word.toCharArray()) {
+
+            if (Character.isLowerCase(ch)) {
+                lower[ch - 'a'] = true;
+            } else {
+                upper[ch - 'A'] = true;
             }
-            if (lwr && upr) {
+        }
+
+        int cnt = 0;
+
+        for (int i = 0; i < 26; i++) {
+            if (lower[i] && upper[i]) {
                 cnt++;
             }
         }
+
         return cnt;
     }
 }
