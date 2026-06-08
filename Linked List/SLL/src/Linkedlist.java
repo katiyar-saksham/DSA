@@ -11,38 +11,39 @@ public class Linkedlist {
         ll.addAtTail(30);
         ll.addAtTail(40);
         ll.addAtTail(50);
-//        printList(ll.head);
+        // printList(ll.head);
 
-//        ll.addAtHead(0);
+        // ll.addAtHead(0);
         System.out.print("Original Linked List: ");
         printList(ll.head);
 
-//        ll.deleteAtHead();
-//        printList(ll.head);
+        // ll.deleteAtHead();
+        // printList(ll.head);
 
-//        System.out.println(ll.search(90));
+        // System.out.println(ll.search(90));
 
-//        ll.insert(3, 99);
+        // ll.insert(3, 99);
         ll.del(3);/*
-class Node {
-    int data;
-    Node next;
-
-    Node(int x) {
-        data = x;
-        next = null;
-    }
-} */
+                   * class Node {
+                   * int data;
+                   * Node next;
+                   * 
+                   * Node(int x) {
+                   * data = x;
+                   * next = null;
+                   * }
+                   * }
+                   */
 
         class Solution {
             int getMiddle(Node head) {
                 // code here
-                Node slow=head;
-                Node fast=head;
+                Node slow = head;
+                Node fast = head;
 
-                while(fast.next!=null&&fast!=null){
-                    slow=slow.next;
-                    fast=fast.next.next;
+                while (fast.next != null && fast != null) {
+                    slow = slow.next;
+                    fast = fast.next.next;
                 }
                 return slow.data;
 
@@ -63,14 +64,15 @@ class Node {
         }
         temp.next = temp.next.next;
         if (idx == size - 1) {
-            tail = temp; //deleting tail
+            tail = temp; // deleting tail
         }
         size--;
     }
+
     private void insert(int idx, int x) {
         if (idx < 0 || idx > size) {
             throw new IndexOutOfBoundsException();
-        } else if (idx == 0) {  // insert at head
+        } else if (idx == 0) { // insert at head
             addAtHead(x);
         } else if (idx == size) { // insert at tail
             addAtTail(x);
@@ -86,26 +88,31 @@ class Node {
             size++;
         }
     }
+
     private int search(int x) {
         Node temp = head;
         int idx = 0;
 
         while (temp != null) {
-            if (temp.val == x) return idx;
+            if (temp.val == x)
+                return idx;
             temp = temp.next;
             idx++;
         }
         return -1;
     }
+
     private void deleteAtHead() {
         if (head == null) {
             System.out.println("list is empty");
             return;
         }
         head = head.next;
-        if (head == null) tail = null;
+        if (head == null)
+            tail = null;
         size--;
     }
+
     private void addAtTail(int x) {
         Node temp = new Node(x);
         if (tail == null) {
@@ -116,6 +123,7 @@ class Node {
         }
         size++;
     }
+
     private static void printList(Node head) {
         if (head == null) {
             return;
@@ -127,6 +135,7 @@ class Node {
         }
         System.out.println();
     }
+
     private void addAtHead(int i) {
         Node temp = new Node(i);
         temp.next = head;
