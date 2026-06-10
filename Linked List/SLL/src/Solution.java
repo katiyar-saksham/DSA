@@ -37,10 +37,10 @@ public class Solution {
         Node head = null;
         Node tail = null;
 
-        String[] arr = len.trim().split("\\s+");
+        StringTokenizer st = new StringTokenizer(len);
 
-        for (String s : arr) {
-            int val = Integer.parseInt(s); // REMEMBER THIS
+        while (st.hasMoreTokens()) {
+            int val = Integer.parseInt(st.nextToken());
 
             Node nw = new Node(val);
 
@@ -59,7 +59,7 @@ public class Solution {
         while (curr != null) {
             System.out.print(curr.val);
             if (curr.next != null) {
-                System.out.println(" ");
+                System.out.print(" ");
             }
             curr = curr.next;
         }
