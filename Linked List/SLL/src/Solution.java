@@ -6,7 +6,7 @@ class Node {
 
     Node(int val) {
         this.val = val;
-        this.next = next;
+        this.next = null;
     }
 }
 
