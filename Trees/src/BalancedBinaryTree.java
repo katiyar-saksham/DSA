@@ -9,7 +9,7 @@ class Node {
     }
 }
 
-class Solution {
+class BalancedBinaryTree {
     static Node buildTree(int[] arr) {
         if (arr.length == 0 || arr[0] == -1) {
             return null;
@@ -31,7 +31,7 @@ class Solution {
 
             if (i < arr.length && arr[i] != -1) {
                 curr.right = new Node(arr[i]);
-                q.offer(curr.right);b
+                q.offer(curr.right);
             }
             i++;
         }
@@ -39,11 +39,11 @@ class Solution {
         return root;
     }
 
-    public boolean isBalanced(Node root) {
+    public static boolean isBalanced(Node root) {
         return height(root) != -1;
     }
 
-    private int height(Node root) {
+    private static int height(Node root) {
         if (root == null) {
             return 0;
         }
