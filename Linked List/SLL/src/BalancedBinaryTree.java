@@ -39,7 +39,7 @@ class Solution {
         return root;
     }
 
-    public static boolean isBalanced(Node root) {
+    public boolean isBalanced(Node root) {
         return height(root) != -1;
     }
 
