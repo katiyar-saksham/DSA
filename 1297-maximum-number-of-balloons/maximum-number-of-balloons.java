@@ -4,9 +4,12 @@ class Solution {
         for (int i = 0; i < text.length(); i++) {
             arr[text.charAt(i) - 'a']++;
         }
-        return Math.min(arr['b' - 'a'],
-                Math.min(arr['a' - 'a'],
-                        Math.min(arr['l' - 'a'] / 2,
-                                Math.min(arr['o' - 'a'] / 2, arr['n' - 'a']))));
+        int b = arr['b' - 'a'];
+        int a = arr['a' - 'a'];
+        int l = arr['l' - 'a'] / 2;
+        int o = arr['o' - 'a'] / 2;
+        int n = arr['n' - 'a'];
+
+        return Math.min(b, Math.min(a, Math.min(l, Math.min(o, n))));
     }
 }
