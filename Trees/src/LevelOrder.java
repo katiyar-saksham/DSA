@@ -1,7 +1,4 @@
-import java.util.LinkedList;
-import java.util.Queue;
-
-import javax.swing.tree.TreeNode;
+import java.util.*;
 
 class Node {
     int val;
