@@ -54,3 +54,5 @@ public class BinaryTreeSum {
         System.out.println("Sum of all nodes: " + sum(root));
     }
 }
+
+//while making tree using array why we use 2*i+1 or +2?
