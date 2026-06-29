@@ -21,12 +21,12 @@ class Solution {
 
         int mini = Integer.MAX_VALUE;
         for (int i = 0; i < coins.length; i++) {
-            int ans = helperDP(coins, amount - coins[i],dp);
+            int ans = helperDP(coins, amount - coins[i], dp);
             if (ans != Integer.MAX_VALUE) {
                 mini = Math.min(mini, ans + 1);
             }
-            dp[amount] = mini;
         }
+        dp[amount] = mini;
         return mini;
     }
 
