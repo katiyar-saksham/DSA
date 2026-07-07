@@ -1,17 +1,24 @@
 class Solution {
     public long sumAndMultiply(int n) {
-        String s = String.valueOf(n);
-        String ans = "";
+        long rev = 0;
         int sum = 0;
 
-        for (int i = 0; i < s.length(); i++) {
-            char ch = s.charAt(i);
-            if(ch!='0'){
-                ans+=ch;
-                sum+=ch-'0';
+        while (n > 0) {
+            int digit = n % 10;
+
+            if (digit != 0) {
+                rev = rev * 10 + digit;
+                sum += digit;
             }
+            n /= 10;
         }
-        long x = ans.isEmpty()?0:Long.parseLong(ans);
-        return x*sum;
+
+        long x = 0;
+
+        while (rev > 0) {
+            x = x * 10 + rev % 10;
+            rev /= 10;
+        }
+        return x * sum;
     }
 }
