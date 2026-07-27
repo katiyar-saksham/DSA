@@ -1,9 +1,9 @@
-import java.util.*;
+import java.util.ArrayList;
 
 public class DiagonalTraversal {
 
-    public static List<Integer> diagonalTraversal(int[][] matrix) {
-        List<Integer> result = new ArrayList<>();
+    public static ArrayList<Integer> diagonalTraversal(int[][] matrix) {
+        ArrayList<Integer> result = new ArrayList<>();
         int rows = matrix.length;
         if (rows == 0)
             return result;
@@ -53,7 +53,7 @@ public class DiagonalTraversal {
                 { 7, 8, 9 }
         };
 
-        List<Integer> traversal = diagonalTraversal(matrix);
+        ArrayList<Integer> traversal = diagonalTraversal(matrix);
         for (int num : traversal) {
             System.out.print(num + " ");
         }

@@ -1,4 +1,5 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class ComparableAndComparator {
     public static void main(String[] args) {
@@ -7,7 +8,7 @@ public class ComparableAndComparator {
         Animal a3 = new Animal(7, "blacky", 8);
         Animal a4 = new Animal(1, "maxx", 6);
 
-        List<Animal> dogs = new ArrayList<>();
+        ArrayList<Animal> dogs = new ArrayList<>();
 
         dogs.add(a1);
         dogs.add(a2);
