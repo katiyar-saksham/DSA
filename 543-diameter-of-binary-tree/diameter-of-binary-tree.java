@@ -1,12 +1,14 @@
+import java.util.*;
+
 class Solution {
     int ans = 0;
 
-    public int diameterOfBinaryTree(TreeNode root) {
+    public int diameterOfBinaryTree(Node root) {
         ht(root);
         return ans;
     }
 
-    private int ht(TreeNode root) {
+    private int ht(Node root) {
         if (root == null) {
             return 0;
         }
