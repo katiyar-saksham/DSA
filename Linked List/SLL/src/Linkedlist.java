@@ -23,49 +23,36 @@ public class Linkedlist {
         // System.out.println(ll.search(90));
 
         // ll.insert(3, 99);
-        ll.del(3);/*
-                   * class Node {
-                   * int data;
-                   * Node next;
-                   * 
-                   * Node(int x) {
-                   * data = x;
-                   * next = null;
-                   * }
-                   * }
-                   */
-
-        class Solution {
-            int getMiddle(Node head) {
-                // code here
-                Node slow = head;
-                Node fast = head;
-
-                while (fast.next != null && fast != null) {
-                    slow = slow.next;
-                    fast = fast.next.next;
-                }
-                return slow.data;
-
-            }
-        }
+        ll.del(3);
+        
         System.out.print("Updated Linked List: ");
+        printList(ll.head);
+
+        System.out.println(ll.search(30));
+        ll.insert(2, 25);
         printList(ll.head);
 
     }
 
     private void del(int idx) {
-        if (idx < 0 || idx >= size) {
+        if (idx < 0 || idx >= size)
             throw new IndexOutOfBoundsException();
+
+        if (idx == 0) {
+            deleteAtHead();
+            return;
         }
+
         Node temp = head;
         for (int i = 0; i < idx - 1; i++) {
             temp = temp.next;
         }
+
         temp.next = temp.next.next;
-        if (idx == size - 1) {
-            tail = temp; // deleting tail
-        }
+
+        if (idx == size - 1)
+            tail = temp;
+
         size--;
     }
 

@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class DisplayList {
     public static void display(Node head) {
         //WHILE LOOP

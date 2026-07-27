@@ -1,15 +1,5 @@
 import java.util.*;
 
-class Node {
-    int val;
-    Node next;
-
-    Node(int val) {
-        this.val = val;
-        this.next = null;
-    }
-}
-
 public class Solution {
     private static Node delAtN(Node head, int n) {
         Node dm = new Node(0);
@@ -63,5 +53,6 @@ public class Solution {
             }
             curr = curr.next;
         }
+        sc.close();
     }
 }
