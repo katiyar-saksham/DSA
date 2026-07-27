@@ -91,7 +91,7 @@ It includes:
 **Saksham Katiyar**
 
 - GitHub: https://github.com/katiyar-saksham
-- LinkedIn: https://www.linkedin.com/in/saksham-katiyar/
-- LeetCode: https://leetcode.com/u/katiyar_saksham/
+- LinkedIn: https://www.linkedin.com/in/katiyar-saksham/
+- LeetCode: https://leetcode.com/u/katiyar-saksham/
 - Codolio: https://codolio.com/profile/katiyar-saksham
 - Portfolio: https://sakshamkatiyar.vercel.app
