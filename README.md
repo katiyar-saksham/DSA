@@ -54,17 +54,17 @@ DSA
 - Queue
 - Trees
 - Binary Search Trees
-- Heap
-- Graphs
+<!-- - Heap -->
+<!-- - Graphs -->
 - Recursion
-- Backtracking
+<!-- - Backtracking -->
 - Binary Search
 - Sliding Window
 - Two Pointers
 - Prefix Sum
 - Bit Manipulation
-- Dynamic Programming
-- Greedy Algorithms
+<!-- - Dynamic Programming -->
+<!-- - Greedy Algorithms -->
 - Sorting & Searching
 - Java Collection Framework
 
