@@ -38,18 +38,18 @@ public class Implementation {
         System.out.print("Inorder Traversal: ");
         display(a);
         System.out.println();
-//
-//        int size = size(a);
-//        System.out.println("\nSize of tree: " + size);
-//
-//        int sum = sum(a);
-//        System.out.println("Sum of tree: " + sum);
-//
-//        int pdt = product(a);
-//        System.out.println("Non Zero product: " + pdt);
-//
-//        int max = max(a);
-//        System.out.println("Maximum val: " + max);
+
+       int size = size(a);
+       System.out.println("\nSize of tree: " + size);
+
+       int sum = sum(a);
+       System.out.println("Sum of tree: " + sum);
+
+       int pdt = product(a);
+       System.out.println("Non Zero product: " + pdt);
+
+       int max = max(a);
+       System.out.println("Maximum val: " + max);
 
         int lvl = levels(a);
         System.out.println("Levels: " + lvl);
