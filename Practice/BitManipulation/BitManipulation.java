@@ -20,3 +20,4 @@ public class BitManipulation {
         System.out.println("Bitwise AND with mask: " + result);
     }
 }
+
