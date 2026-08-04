@@ -12,13 +12,9 @@ class Solution {
 
         Arrays.sort(nums);
 
-        for (int i = 1; i < n; i++) {
-            int prev = nums[i - 1];
-            int nxt = nums[i];
-
-            while (prev + 1 < nxt) {
-                res.add(prev+1);
-                prev++;
+        for (int i = 1; i < nums.length; i++) {
+            for (int j = nums[i - 1] + 1; j < nums[i]; j++) {
+                res.add(j);
             }
         }
         return res;
