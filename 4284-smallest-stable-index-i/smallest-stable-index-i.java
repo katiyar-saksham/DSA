@@ -1,18 +1,19 @@
 class Solution {
     public int firstStableIndex(int[] nums, int k) {
         int n = nums.length;
-        int[] sMin = new int[n];
+        int mx = Integer.MIN_VALUE;
+        int[] sfx = new int[n];
 
-        // Build suffix min
-        sMin[n - 1] = nums[n - 1];
+        sfx[n - 1] = nums[n - 1];
+
         for (int i = n - 2; i >= 0; i--) {
-            sMin[i] = Math.min(nums[i], sMin[i + 1]);
+            sfx[i] = Math.min(nums[i], sfx[i + 1]);
         }
 
-        int pMax = nums[0];
         for (int i = 0; i < n; i++) {
-            pMax = Math.max(pMax, nums[i]);
-            if (pMax - sMin[i] <= k) {
+            mx = Math.max(mx, nums[i]);
+
+            if (mx - sfx[i] <= k) {
                 return i;
             }
         }
