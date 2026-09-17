@@ -11,6 +11,7 @@ class Node {
 
 class Solution {
 	public ArrayList<Integer> leftView(Node root) {
+		// code here
 		ArrayList<Integer> lst = new ArrayList<>();
 		
 		if (root == null) {
@@ -18,23 +19,24 @@ class Solution {
 		}
 		
 		Queue<Node> q = new LinkedList<>();
-		q.add(root);
+		q.offer(root);
 		
 		while (!q.isEmpty()) {
 			int size = q.size();
 			
 			lst.add(q.peek().data);
-			
 			for (int i = 0; i<size; i++) {
-				Node val = q.poll();
-				if (val.left != null) {
-					q.add(val.left);
+				Node curr = q.poll();
+				
+				if (curr.left != null) {
+					q.offer(curr.left);
 				}
-				if (val.right != null) {
-					q.add(val.right);
+				if (curr.right != null) {
+					q.offer(curr.right);
 				}
 			}
 		}
 		return lst;
+		
 	}
 }
