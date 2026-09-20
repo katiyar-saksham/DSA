@@ -4,8 +4,9 @@ class Solution {
     }
 
     private int height(TreeNode root) {
-        if (root == null)
+        if (root == null) {
             return 0;
+        }
 
         int left = height(root.left);
         if (left == -1) {
@@ -20,6 +21,7 @@ class Solution {
         if (Math.abs(right - left) > 1) {
             return -1;
         }
-        return Math.max(left, right)+1;
+
+        return Math.max(left, right) + 1;
     }
 }
