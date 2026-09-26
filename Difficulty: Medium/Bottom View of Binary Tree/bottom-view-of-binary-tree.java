@@ -1,47 +1,46 @@
+class Pair {
+	int hd;
+	Node node;
+	
+	Pair(Node node, int hd) {
+		this.node = node;
+		this.hd = hd;
+	}
+}
+
 class Solution {
-    public ArrayList<Integer> bottomView(Node root) {
-        ArrayList<Integer> ans = new ArrayList<>();
-
-        if (root == null) {
-            return ans;
-        }
-
-        // HD -> node value
-        TreeMap<Integer, Integer> map = new TreeMap<>();
-
-        // {node, horizontal distance}
-        Queue<Pair> q = new LinkedList<>();
-        q.add(new Pair(root, 0));
-
-        while (!q.isEmpty()) {
-            Pair p = q.poll();
-
-            Node node = p.node;
-            int hd = p.hd;
-
-            // Overwrite: later node in level order wins
-            map.put(hd, node.data);
-
-            if (node.left != null) {
-                q.add(new Pair(node.left, hd - 1));
-            }
-
-            if (node.right != null) {
-                q.add(new Pair(node.right, hd + 1));
-            }
-        }
-
-        ans.addAll(map.values());
-        return ans;
-    }
-
-    static class Pair {
-        Node node;
-        int hd;
-
-        Pair(Node node, int hd) {
-            this.node = node;
-            this.hd = hd;
-        }
-    }
+	public ArrayList<Integer> bottomView(Node root) {
+		// code here
+		ArrayList<Integer> lst = new ArrayList<>();
+		
+		if (root == null) {
+			return lst;
+		}
+		
+		TreeMap<Integer, Integer> mpp = new TreeMap<>();
+		
+		Queue<Pair> q = new LinkedList<>();
+		q.offer(new Pair(root, 0));
+		
+		while (!q.isEmpty()) {
+			Pair p = q.poll();
+			
+			Node curr = p.node;
+			int hd = p.hd;
+			
+			mpp.put(hd, curr.data);
+			
+			if (curr.left != null) {
+				q.offer(new Pair(curr.left, hd - 1));
+			}
+			if (curr.right != null) {
+				q.offer(new Pair(curr.right, hd + 1));
+			}
+		}
+		for (int val : mpp.values()) {
+			lst.add(val);
+		}
+		
+		return lst;
+	}
 }
