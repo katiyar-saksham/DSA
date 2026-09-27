@@ -30,13 +30,13 @@ class Solution {
             int row = curr.row;
             int hd = curr.hd;
 
-            // if (!map.containsKey(hd)) {
-            //     map.put(hd, new ArrayList<>());
-            // }
-            // map.get(hd).add(node.val);
-
-            map.putIfAbsent(hd, new ArrayList<>());
+            if (!map.containsKey(hd)) {
+                map.put(hd, new ArrayList<>());
+            }
             map.get(hd).add(new int[] { row, node.val });
+
+            // map.putIfAbsent(hd, new ArrayList<>());
+            // map.get(hd).add(new int[] { row, node.val });
 
             if (node.left != null) {
                 q.offer(new Pair(node.left, row + 1, hd - 1));
